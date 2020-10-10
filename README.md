@@ -44,8 +44,8 @@ Prerequisite for this project is to install JAVA in your linux system
 ```
 sudo apt-get install openjdk-8-jdk-headless
 ```
-You must have Python 3.6+ installed in your system. Since this is upgraded version of the project. You can prefer older version of this project here. 
-###### Download the latest version of Apache Spark form the official site. I'll recommend you to use the same version which I am using for painless journey.  
+You must have Python 2.7 installed in your system.
+###### Download the same version of Apache Spark form the official site. I'll recommend you to use the same version which I am using for painless journey.  
 ```
 wget -q https://downloads.apache.org/spark/spark-2.0.0/spark-2.0.0-bin-hadoop2.7.tgz
 ```
@@ -54,15 +54,16 @@ wget -q https://downloads.apache.org/spark/spark-2.0.0/spark-2.0.0-bin-hadoop2.7
 Clone this repository:
 ```
 git clone https://github.com/Weirdolucifer/spark-movie-lens
+git checkout v0.1.0
 ```
 If you don't have installed pip, use pip3 for installation 
 ```
-sudo apt-get install python3-pip
+sudo apt-get install python-pip
 ```
 Set up a virtual environment and activate it to avoid dependency issues.
 ```
-mkvirtualenv venv
-workon venv
+virtualenv venv
+.venv/bin/activate
 ```
 Install default-libmysqlclient-dev for flask-mysqldb:
 ```
@@ -70,7 +71,7 @@ sudo apt install default-libmysqlclient-dev
 ```
 Install the required dependencies using the following command
 ```
-pip3 install -r requirements.txt
+pip install -r requirements.txt
 ```
 MySql database setup:
 Here, I have removed the password from mysql login as root. You can set your own password. I created the database and table will be used for the application.
